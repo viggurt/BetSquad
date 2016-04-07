@@ -14,6 +14,8 @@
 		93585CB61C86CD2B00106E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93585CB41C86CD2B00106E13 /* LaunchScreen.storyboard */; };
 		93585CC11C86CD2B00106E13 /* BetTogetherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CC01C86CD2B00106E13 /* BetTogetherTests.swift */; };
 		93585CCC1C86CD2B00106E13 /* BetTogetherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CCB1C86CD2B00106E13 /* BetTogetherUITests.swift */; };
+		93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CDD1C86D38800106E13 /* AddToViewController.swift */; };
+		93C2D43F1C8EFB7F00127615 /* ShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D43E1C8EFB7F00127615 /* ShowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		93585CC71C86CD2B00106E13 /* BetTogetherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTogetherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93585CCB1C86CD2B00106E13 /* BetTogetherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTogetherUITests.swift; sourceTree = "<group>"; };
 		93585CCD1C86CD2B00106E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93585CDD1C86D38800106E13 /* AddToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToViewController.swift; sourceTree = "<group>"; };
+		93C2D43E1C8EFB7F00127615 /* ShowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				93585CAB1C86CD2B00106E13 /* AppDelegate.swift */,
 				93585CAD1C86CD2B00106E13 /* ViewController.swift */,
 				93585CAF1C86CD2B00106E13 /* Main.storyboard */,
+				93C2D43E1C8EFB7F00127615 /* ShowController.swift */,
+				93585CDD1C86D38800106E13 /* AddToViewController.swift */,
 				93585CB21C86CD2B00106E13 /* Assets.xcassets */,
 				93585CB41C86CD2B00106E13 /* LaunchScreen.storyboard */,
 				93585CB71C86CD2B00106E13 /* Info.plist */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C2D43F1C8EFB7F00127615 /* ShowController.swift in Sources */,
 				93585CAE1C86CD2B00106E13 /* ViewController.swift in Sources */,
+				93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */,
 				93585CAC1C86CD2B00106E13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +495,7 @@
 				93585CD21C86CD2B00106E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93585CD31C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogetherTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +504,7 @@
 				93585CD51C86CD2B00106E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93585CD61C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogetherUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +513,7 @@
 				93585CD81C86CD2B00106E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

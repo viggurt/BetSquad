@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetTogether/AddToViewController.swift"
+            timestampString = "481545683.144628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetTogether/AddToViewController.swift"
+            timestampString = "481545683.144628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetTogether/AddToViewController.swift"
+            timestampString = "480348940.517863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "AddToViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BetTogether.AddToViewController.delegate.getter : Swift.Optional&lt;BetTogether.ViewController&gt;"
+                  moduleName = "BetTogether"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnlos/Documents/iOSProjekt/iOS/BetTogether/BetTogether/AddToViewController.swift"
+                  timestampString = "480348940.546809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BetTogether.AddToViewController.delegate.setter : Swift.Optional&lt;BetTogether.ViewController&gt;"
+                  moduleName = "BetTogether"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnlos/Documents/iOSProjekt/iOS/BetTogether/BetTogether/AddToViewController.swift"
+                  timestampString = "480348940.549303"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BetTogether.AddToViewController.delegate.materializeForSet : Swift.Optional&lt;BetTogether.ViewController&gt;"
+                  moduleName = "BetTogether"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnlos/Documents/iOSProjekt/iOS/BetTogether/BetTogether/AddToViewController.swift"
+                  timestampString = "480348940.549471"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BetTogether.AddToViewController.init (BetTogether.AddToViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; BetTogether.AddToViewController"
+                  moduleName = "BetTogether"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnlos/Documents/iOSProjekt/iOS/BetTogether/BetTogether/AddToViewController.swift"
+                  timestampString = "480348940.549604"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BetTogether.AddToViewController.init (BetTogether.AddToViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BetTogether.AddToViewController&gt;"
+                  moduleName = "BetTogether"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnlos/Documents/iOSProjekt/iOS/BetTogether/BetTogether/AddToViewController.swift"
+                  timestampString = "480348940.549735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
