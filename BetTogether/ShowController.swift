@@ -13,14 +13,15 @@ class ShowController: UIViewController {
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var betTypeLabel: UILabel!
     
-    var teams: String?
-    var betType: String?
+    //var teams: String?
+    //var betType: String?
+    var choosenBet: PlacedBet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        teamLabel.text = teams
-        betTypeLabel.text = betType
+        teamLabel.text = "\(choosenBet!.homeTeam) - \(choosenBet!.awayTeam)"
+        betTypeLabel.text = choosenBet!.bet
         
         // Do any additional setup after loading the view.
     }

@@ -153,12 +153,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bortalag" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="528-24-ICs">
-                                <rect key="frame" x="320" y="103" width="260" height="30"/>
+                                <rect key="frame" x="320" y="117" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fotboll/Tennis/Basket etc.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ngv-EJ-kcq">
-                                <rect key="frame" x="20" y="170" width="260" height="30"/>
+                                <rect key="frame" x="20" y="184" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -167,7 +167,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1X2/Över/Under etc.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-Af-jxz">
-                                <rect key="frame" x="320" y="170" width="260" height="30"/>
+                                <rect key="frame" x="320" y="184" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -176,7 +176,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aT-Vv-9YQ">
-                                <rect key="frame" x="287" y="106" width="26" height="24"/>
+                                <rect key="frame" x="287" y="120" width="26" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="V8f-XM-sO1"/>
                                 </constraints>
@@ -185,25 +185,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmB-ff-q7c">
-                                <rect key="frame" x="437" y="141" width="26" height="21"/>
+                                <rect key="frame" x="437" y="155" width="26" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bolag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLH-aX-vPT">
-                                <rect key="frame" x="428" y="208" width="44" height="21"/>
+                                <rect key="frame" x="428" y="222" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTl-AU-zbz">
-                                <rect key="frame" x="130" y="208" width="42" height="21"/>
+                                <rect key="frame" x="130" y="222" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-AG-ug0">
-                                <rect key="frame" x="129" y="141" width="43" height="21"/>
+                                <rect key="frame" x="129" y="155" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -243,7 +243,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="bet365/Matchbook/Unitbet etc.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vql-aO-Hdj">
-                                <rect key="frame" x="320" y="237" width="260" height="30"/>
+                                <rect key="frame" x="320" y="251" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -262,13 +262,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hemmalag" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSH-Hl-1ae">
-                                <rect key="frame" x="20" y="103" width="260" height="30"/>
+                                <rect key="frame" x="20" y="117" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6md-hb-I76">
-                                <rect key="frame" x="20" y="237" width="260" height="30"/>
+                                <rect key="frame" x="20" y="251" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -280,6 +280,27 @@
                                     <outlet property="delegate" destination="Rsf-sO-hEQ" id="lej-6t-jcA"/>
                                 </connections>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Datum" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-oe-dJ7">
+                                <rect key="frame" x="170" y="79" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="9sy-Ok-DFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateTextFieldPressed:" destination="Rsf-sO-hEQ" eventType="editingDidBegin" id="oB7-ys-cwi"/>
+                                </connections>
+                            </textField>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="KlT-Yr-W4X">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="481720743.06967801">
+                                    <!--2016-04-07 11:19:03 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="sv_SE"/>
+                                <connections>
+                                    <action selector="datePickerChangedValue:" destination="Rsf-sO-hEQ" eventType="valueChanged" id="WqU-kQ-B7H"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -299,15 +320,18 @@
                             <constraint firstItem="vPp-3L-swx" firstAttribute="top" secondItem="iyg-Zh-7IP" secondAttribute="bottom" constant="8" id="Crs-rM-wAV"/>
                             <constraint firstItem="528-24-ICs" firstAttribute="leading" secondItem="Vql-aO-Hdj" secondAttribute="leading" id="DUB-wl-cMp"/>
                             <constraint firstItem="528-24-ICs" firstAttribute="leading" secondItem="Qea-Af-jxz" secondAttribute="leading" id="DaZ-1n-bxH"/>
-                            <constraint firstItem="CTl-AU-zbz" firstAttribute="centerX" secondItem="Ngv-EJ-kcq" secondAttribute="centerX" id="FtA-Kl-dUS"/>
-                            <constraint firstItem="QSH-Hl-1ae" firstAttribute="top" secondItem="D5o-zH-bG9" secondAttribute="bottom" constant="39" id="H8y-gR-2wg"/>
+                            <constraint firstItem="CTl-AU-zbz" firstAttribute="centerX" secondItem="Ngv-EJ-kcq" secondAttribute="centerX" constant="1" id="FtA-Kl-dUS"/>
+                            <constraint firstItem="QSH-Hl-1ae" firstAttribute="top" secondItem="D5o-zH-bG9" secondAttribute="bottom" constant="53" id="H8y-gR-2wg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dqL-4p-Qvl" secondAttribute="trailing" constant="-20" id="I9O-Tn-uIJ"/>
                             <constraint firstItem="528-24-ICs" firstAttribute="leading" secondItem="7aT-Vv-9YQ" secondAttribute="trailing" constant="7" id="ICK-Lk-sgd"/>
+                            <constraint firstItem="pdU-oe-dJ7" firstAttribute="centerX" secondItem="JmC-MZ-v7I" secondAttribute="centerX" id="Oml-oG-PVx"/>
                             <constraint firstItem="7aT-Vv-9YQ" firstAttribute="leading" secondItem="QSH-Hl-1ae" secondAttribute="trailing" constant="7" id="SYu-FH-rvb"/>
                             <constraint firstItem="iyg-Zh-7IP" firstAttribute="centerX" secondItem="JmC-MZ-v7I" secondAttribute="centerX" id="Sne-qP-sg3"/>
                             <constraint firstItem="7aT-Vv-9YQ" firstAttribute="centerY" secondItem="QSH-Hl-1ae" secondAttribute="centerY" id="Tb1-Dx-q0h"/>
                             <constraint firstItem="iyg-Zh-7IP" firstAttribute="centerY" secondItem="JmC-MZ-v7I" secondAttribute="centerY" id="VK1-Nu-8ZJ"/>
                             <constraint firstItem="QSH-Hl-1ae" firstAttribute="leading" secondItem="Ngv-EJ-kcq" secondAttribute="leading" id="WCl-pI-mVc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KlT-Yr-W4X" secondAttribute="trailing" constant="-20" id="WEg-sE-myG"/>
+                            <constraint firstItem="pdU-oe-dJ7" firstAttribute="top" secondItem="D5o-zH-bG9" secondAttribute="bottom" constant="15" id="Wmn-7k-81Q"/>
                             <constraint firstItem="Vql-aO-Hdj" firstAttribute="top" secondItem="bLH-aX-vPT" secondAttribute="bottom" constant="8" id="XpA-cr-nhz"/>
                             <constraint firstItem="Dtv-AG-ug0" firstAttribute="top" secondItem="QSH-Hl-1ae" secondAttribute="bottom" constant="8" symbolic="YES" id="Xr3-1u-qHw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4GC-5x-b0W" secondAttribute="trailing" constant="-20" id="Z6r-eA-iR5"/>
@@ -315,8 +339,10 @@
                             <constraint firstItem="QSH-Hl-1ae" firstAttribute="trailing" secondItem="Ngv-EJ-kcq" secondAttribute="trailing" id="Zob-4T-5zM"/>
                             <constraint firstItem="528-24-ICs" firstAttribute="centerX" secondItem="CmB-ff-q7c" secondAttribute="centerX" id="aYr-1t-agu"/>
                             <constraint firstItem="QSH-Hl-1ae" firstAttribute="leading" secondItem="6md-hb-I76" secondAttribute="leading" id="asH-Cd-wOO"/>
+                            <constraint firstItem="nV5-Gr-X8C" firstAttribute="top" secondItem="KlT-Yr-W4X" secondAttribute="bottom" id="bHf-hh-azL"/>
                             <constraint firstItem="IWI-vG-CnP" firstAttribute="centerX" secondItem="JmC-MZ-v7I" secondAttribute="centerX" id="cmN-1i-rM9"/>
                             <constraint firstItem="4GC-5x-b0W" firstAttribute="leading" secondItem="JmC-MZ-v7I" secondAttribute="leadingMargin" constant="-20" id="fav-DA-Ogs"/>
+                            <constraint firstItem="KlT-Yr-W4X" firstAttribute="top" secondItem="D5o-zH-bG9" secondAttribute="bottom" constant="320" id="gKJ-KK-20r"/>
                             <constraint firstItem="7aT-Vv-9YQ" firstAttribute="centerX" secondItem="iyg-Zh-7IP" secondAttribute="centerX" id="ghS-gl-hJo"/>
                             <constraint firstItem="YrS-z5-Lbr" firstAttribute="top" secondItem="IWI-vG-CnP" secondAttribute="bottom" constant="8" id="ifC-MV-H1f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YrS-z5-Lbr" secondAttribute="trailing" id="kFd-Gg-kLi"/>
@@ -326,6 +352,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="528-24-ICs" secondAttribute="trailing" id="ovM-37-9Vw"/>
                             <constraint firstItem="528-24-ICs" firstAttribute="centerX" secondItem="bLH-aX-vPT" secondAttribute="centerX" id="r9y-DX-WTA"/>
                             <constraint firstItem="nV5-Gr-X8C" firstAttribute="top" secondItem="4GC-5x-b0W" secondAttribute="bottom" id="srp-VX-D6U"/>
+                            <constraint firstItem="KlT-Yr-W4X" firstAttribute="leading" secondItem="JmC-MZ-v7I" secondAttribute="leadingMargin" constant="-20" id="wUh-8V-FGk"/>
                             <constraint firstItem="nV5-Gr-X8C" firstAttribute="top" secondItem="dqL-4p-Qvl" secondAttribute="bottom" id="yiX-KR-HHX"/>
                             <constraint firstItem="CTl-AU-zbz" firstAttribute="leading" secondItem="Ngv-EJ-kcq" secondAttribute="leading" id="z9b-cS-Zqf"/>
                         </constraints>
@@ -339,9 +366,12 @@
                         <outlet property="awayTeamTextField" destination="528-24-ICs" id="Kuf-od-R8G"/>
                         <outlet property="betTextField" destination="Qea-Af-jxz" id="fvD-3T-zOE"/>
                         <outlet property="companyTextField" destination="Vql-aO-Hdj" id="VZP-cU-eyD"/>
+                        <outlet property="datePickerField" destination="pdU-oe-dJ7" id="XtT-dx-qmN"/>
+                        <outlet property="datePickerView" destination="KlT-Yr-W4X" id="o3C-xr-7vN"/>
                         <outlet property="homeTeamTextField" destination="QSH-Hl-1ae" id="1vc-2G-lZt"/>
                         <outlet property="oddsTextField" destination="6md-hb-I76" id="omX-Yr-XIh"/>
                         <outlet property="reviewText" destination="YrS-z5-Lbr" id="Jw1-mO-5V8"/>
+                        <outlet property="segmentControl" destination="vPp-3L-swx" id="MMa-YT-Ytd"/>
                         <outlet property="sportTextField" destination="Ngv-EJ-kcq" id="Wnq-z7-fg5"/>
                     </connections>
                 </viewController>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2169811A3CCD3E4A89C40A11 /* Pods_BetTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F3D8B20639274873105115 /* Pods_BetTogether.framework */; };
 		93585CAC1C86CD2B00106E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CAB1C86CD2B00106E13 /* AppDelegate.swift */; };
 		93585CAE1C86CD2B00106E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CAD1C86CD2B00106E13 /* ViewController.swift */; };
 		93585CB11C86CD2B00106E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93585CAF1C86CD2B00106E13 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		93585CCC1C86CD2B00106E13 /* BetTogetherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CCB1C86CD2B00106E13 /* BetTogetherUITests.swift */; };
 		93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CDD1C86D38800106E13 /* AddToViewController.swift */; };
 		93C2D43F1C8EFB7F00127615 /* ShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D43E1C8EFB7F00127615 /* ShowController.swift */; };
+		93FF486F1CB68B3200CCDA32 /* PlacedBet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		93585CCD1C86CD2B00106E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93585CDD1C86D38800106E13 /* AddToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToViewController.swift; sourceTree = "<group>"; };
 		93C2D43E1C8EFB7F00127615 /* ShowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowController.swift; sourceTree = "<group>"; };
+		93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedBet.swift; sourceTree = "<group>"; };
+		BD3552B0D840FC05B15FE654 /* Pods-BetTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E832AE8FF671C1892BF517 /* Pods-BetTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether.release.xcconfig"; sourceTree = "<group>"; };
+		F6F3D8B20639274873105115 /* Pods_BetTogether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetTogether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2169811A3CCD3E4A89C40A11 /* Pods_BetTogether.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,8 @@
 				93585CBF1C86CD2B00106E13 /* BetTogetherTests */,
 				93585CCA1C86CD2B00106E13 /* BetTogetherUITests */,
 				93585CA91C86CD2B00106E13 /* Products */,
+				B2E50ED7C3B3E61116A67002 /* Pods */,
+				E156722B235C2665BFA449F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +115,7 @@
 				93585CAF1C86CD2B00106E13 /* Main.storyboard */,
 				93C2D43E1C8EFB7F00127615 /* ShowController.swift */,
 				93585CDD1C86D38800106E13 /* AddToViewController.swift */,
+				93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */,
 				93585CB21C86CD2B00106E13 /* Assets.xcassets */,
 				93585CB41C86CD2B00106E13 /* LaunchScreen.storyboard */,
 				93585CB71C86CD2B00106E13 /* Info.plist */,
@@ -131,6 +141,23 @@
 			path = BetTogetherUITests;
 			sourceTree = "<group>";
 		};
+		B2E50ED7C3B3E61116A67002 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD3552B0D840FC05B15FE654 /* Pods-BetTogether.debug.xcconfig */,
+				E6E832AE8FF671C1892BF517 /* Pods-BetTogether.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E156722B235C2665BFA449F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F3D8B20639274873105115 /* Pods_BetTogether.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93585CD01C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogether" */;
 			buildPhases = (
+				35A55B2B0372B8136A66336A /* Check Pods Manifest.lock */,
 				93585CA41C86CD2B00106E13 /* Sources */,
 				93585CA51C86CD2B00106E13 /* Frameworks */,
 				93585CA61C86CD2B00106E13 /* Resources */,
+				7F309D409801F0A3FF82D319 /* Embed Pods Frameworks */,
+				5B8675F3D53A24F37DDB5360 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +290,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35A55B2B0372B8136A66336A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B8675F3D53A24F37DDB5360 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F309D409801F0A3FF82D319 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93585CA41C86CD2B00106E13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,6 +347,7 @@
 				93585CAE1C86CD2B00106E13 /* ViewController.swift in Sources */,
 				93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */,
 				93585CAC1C86CD2B00106E13 /* AppDelegate.swift in Sources */,
+				93FF486F1CB68B3200CCDA32 /* PlacedBet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +487,7 @@
 		};
 		93585CD11C86CD2B00106E13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD3552B0D840FC05B15FE654 /* Pods-BetTogether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BetTogether/Info.plist;
@@ -419,6 +499,7 @@
 		};
 		93585CD21C86CD2B00106E13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E832AE8FF671C1892BF517 /* Pods-BetTogether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BetTogether/Info.plist;

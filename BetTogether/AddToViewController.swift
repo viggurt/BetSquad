@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
-class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate {
+class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate{
+    
+    let ref = Firebase(url: "https://betsquad.firebaseio.com/")
+    var unit: Int = 1
 
     //MARK: Outlets
     @IBOutlet weak var homeTeamTextField: UITextField!
@@ -18,6 +22,9 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var oddsTextField: UITextField!
     @IBOutlet weak var companyTextField: UITextField!
     @IBOutlet weak var reviewText: UITextView!
+    @IBOutlet weak var datePickerField: UITextField!
+    @IBOutlet weak var datePickerView: UIDatePicker!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     var betText: String = ""
     
@@ -29,6 +36,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var sport = ["Baseball", "Fotboll", "Basket", "Hockey", "Tennis"]
     var activeDataArray = []
     var dataTextField = UITextField()
+    
     
     //TextView editing incomming
     //let PLACEHOLDER_TEXT = "Skriv din analys här..."
@@ -51,14 +59,8 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
+        datePickerView.addTarget(self, action: Selector("datePickerChanged"), forControlEvents: UIControlEvents.ValueChanged)
         
-        /*Skapar placeholder i Textviewen
-        reviewText = UITextView(frame: CGRect(x: 20, y: 80,
-            width: self.view.frame.size.width - 40, height: 40))
-        self.view.addSubview(reviewText!)
-        
-        applyPlaceholderStyle(reviewText!, placeholderText: PLACEHOLDER_TEXT)
-        */
         
     }
 
@@ -66,24 +68,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         super.didReceiveMemoryWarning()
         
     }
-    /*Om man vill ha placeholder i texten
     
-    //TextView placeholder funktion
-    func applyPlaceholderStyle(aTextview: UITextView, placeholderText: String)
-    {
-    aTextview.textColor = UIColor.lightGrayColor()
-    aTextview.text = placeholderText
-    }
-    
-    //Back to basic när man börjar skriva
-    func applyNonPlaceholderStyle(aTextview: UITextView)
-    {
-    // make it look like normal text instead of a placeholder
-    aTextview.textColor = UIColor.darkTextColor()
-    aTextview.alpha = 1.0
-    }
-    
-    */
     
     //Om textfield "sportTextField" eller "betTextField" är klickad så kommer en PickerView upp
     
@@ -97,6 +82,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         dataPickerView.reloadAllComponents()
         dataPickerView.hidden = false
+    
     }
     
     //MARK: Funktioner för Picker View
@@ -146,16 +132,25 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //MARK: Actions
     
+    
     @IBAction func placeOddsButton(sender: UIButton) {
         let homeTeam = homeTeamTextField.text!
         let awayTeam = awayTeamTextField.text!
         let sportText = sportTextField.text!
         betText = betTextField.text!
-        let oddsText = oddsTextField.text!
+        let oddsText = Double(oddsTextField.text!)
         let companyText = companyTextField.text!
         let review = reviewText.text!
+        let date = datePickerField.text!
         
-        delegate?.addGame(homeTeam,awayTeam: awayTeam)
+        let placedBet = PlacedBet(homeTeam: homeTeam, awayTeam: awayTeam, sport: sportText, bet: betText, odds: oddsText!, company: companyText, date: date, unit: unit, analys: "hej")
+        
+        let betRef = ref.childByAppendingPath("Placed Bet")
+        let betIdRef = betRef.childByAutoId()
+        
+        betIdRef.setValue(placedBet.toAnyObject())
+        
+        //delegate?.addGame(homeTeam,awayTeam: awayTeam)
         homeTeamTextField.text = ""
         awayTeamTextField.text = ""
         sportTextField.text = ""
@@ -166,9 +161,58 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     @IBAction func unitsSegment(sender: AnyObject) {
+        
+        switch segmentControl.selectedSegmentIndex{
+        case 0:
+            unit = 1
+            
+        case 1:
+            unit = 2
+        
+        case 2:
+            unit = 3
+            
+        case 3:
+            unit = 4
+            
+        case 4:
+            unit = 5
+            
+        default:
+            unit = 1
+        
+        }
+        
     }
     
+    func datePickerChanged(sender: UIDatePicker){
     
+        var dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        //dateFormatter.dateFormat = "dd-mm-yyyy hh:mm"
+        datePickerField.text = dateFormatter.stringFromDate(sender.date)
+        
+        
+    }
+    
+    @IBAction func dateTextFieldPressed(sender: UITextField) {
+        
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    
+    }
+    
+    @IBAction func datePickerChangedValue(sender: UIDatePicker) {
+        print("hej")
+    }
 
     /*
     // MARK: - Navigation
