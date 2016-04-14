@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		93585CA81C86CD2B00106E13 /* BetTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93585CAB1C86CD2B00106E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93585CAD1C86CD2B00106E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93585CAD1C86CD2B00106E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BetTogether/ViewController.swift; sourceTree = "<group>"; };
 		93585CB01C86CD2B00106E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93585CB21C86CD2B00106E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93585CB51C86CD2B00106E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,8 +51,8 @@
 		93585CC71C86CD2B00106E13 /* BetTogetherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTogetherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93585CCB1C86CD2B00106E13 /* BetTogetherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTogetherUITests.swift; sourceTree = "<group>"; };
 		93585CCD1C86CD2B00106E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93585CDD1C86D38800106E13 /* AddToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToViewController.swift; sourceTree = "<group>"; };
-		93C2D43E1C8EFB7F00127615 /* ShowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowController.swift; sourceTree = "<group>"; };
+		93585CDD1C86D38800106E13 /* AddToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddToViewController.swift; path = BetTogether/AddToViewController.swift; sourceTree = "<group>"; };
+		93C2D43E1C8EFB7F00127615 /* ShowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowController.swift; path = BetTogether/ShowController.swift; sourceTree = "<group>"; };
 		93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedBet.swift; sourceTree = "<group>"; };
 		BD3552B0D840FC05B15FE654 /* Pods-BetTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether.debug.xcconfig"; sourceTree = "<group>"; };
 		E6E832AE8FF671C1892BF517 /* Pods-BetTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,9 +85,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		930477741CB7C72F0040B7EE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93585CDD1C86D38800106E13 /* AddToViewController.swift */,
+				93C2D43E1C8EFB7F00127615 /* ShowController.swift */,
+				93585CAD1C86CD2B00106E13 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		930477751CB7C74B0040B7EE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				93585CAF1C86CD2B00106E13 /* Main.storyboard */,
+				93585CB41C86CD2B00106E13 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		93585C9F1C86CD2B00106E13 = {
 			isa = PBXGroup;
 			children = (
+				930477751CB7C74B0040B7EE /* Storyboards */,
+				930477741CB7C72F0040B7EE /* Controller */,
 				93585CAA1C86CD2B00106E13 /* BetTogether */,
 				93585CBF1C86CD2B00106E13 /* BetTogetherTests */,
 				93585CCA1C86CD2B00106E13 /* BetTogetherUITests */,
@@ -111,13 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				93585CAB1C86CD2B00106E13 /* AppDelegate.swift */,
-				93585CAD1C86CD2B00106E13 /* ViewController.swift */,
-				93585CAF1C86CD2B00106E13 /* Main.storyboard */,
-				93C2D43E1C8EFB7F00127615 /* ShowController.swift */,
-				93585CDD1C86D38800106E13 /* AddToViewController.swift */,
 				93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */,
 				93585CB21C86CD2B00106E13 /* Assets.xcassets */,
-				93585CB41C86CD2B00106E13 /* LaunchScreen.storyboard */,
 				93585CB71C86CD2B00106E13 /* Info.plist */,
 			);
 			path = BetTogether;
@@ -389,6 +405,7 @@
 				93585CB01C86CD2B00106E13 /* Base */,
 			);
 			name = Main.storyboard;
+			path = BetTogether;
 			sourceTree = "<group>";
 		};
 		93585CB41C86CD2B00106E13 /* LaunchScreen.storyboard */ = {
@@ -397,6 +414,7 @@
 				93585CB51C86CD2B00106E13 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = BetTogether;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

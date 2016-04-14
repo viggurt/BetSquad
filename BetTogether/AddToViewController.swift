@@ -138,12 +138,12 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let awayTeam = awayTeamTextField.text!
         let sportText = sportTextField.text!
         betText = betTextField.text!
-        let oddsText = Double(oddsTextField.text!)
+        let oddsText = oddsTextField.text!
         let companyText = companyTextField.text!
         let review = reviewText.text!
         let date = datePickerField.text!
         
-        let placedBet = PlacedBet(homeTeam: homeTeam, awayTeam: awayTeam, sport: sportText, bet: betText, odds: oddsText!, company: companyText, date: date, unit: unit, analys: "hej")
+        let placedBet = PlacedBet(homeTeam: homeTeam, awayTeam: awayTeam, sport: sportText, bet: betText, odds: oddsText, company: companyText, date: date, unit: unit, analys: review)
         
         let betRef = ref.childByAppendingPath("Placed Bet")
         let betIdRef = betRef.childByAutoId()
@@ -151,14 +151,18 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         betIdRef.setValue(placedBet.toAnyObject())
         
         //delegate?.addGame(homeTeam,awayTeam: awayTeam)
-        homeTeamTextField.text = ""
-        awayTeamTextField.text = ""
-        sportTextField.text = ""
-        betTextField.text = ""
-        oddsTextField.text = ""
-        companyTextField.text = ""
-        reviewText.text = ""
+/*homeTeamTextField.text = ""
+ awayTeamTextField.text = ""
+ sportTextField.text = ""
+ betTextField.text = ""
+ oddsTextField.text = ""
+ companyTextField.text = ""
+ reviewText.text = ""*/
+
+        navigationController?.popViewControllerAnimated(true)
     }
+    
+    //MARK: Segment action
     
     @IBAction func unitsSegment(sender: AnyObject) {
         
@@ -185,12 +189,18 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
     }
     
+    //MARK: Date Pickern
     func datePickerChanged(sender: UIDatePicker){
     
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        dateFormatter.locale = NSLocale(localeIdentifier: "sv_SE")
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        
         
         //dateFormatter.dateFormat = "dd-mm-yyyy hh:mm"
         datePickerField.text = dateFormatter.stringFromDate(sender.date)
@@ -203,15 +213,12 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let datePickerView:UIDatePicker = UIDatePicker()
         
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        datePickerView.locale = NSLocale(localeIdentifier: "sv_SE")
         
         sender.inputView = datePickerView
         
         datePickerView.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     
-    }
-    
-    @IBAction func datePickerChangedValue(sender: UIDatePicker) {
-        print("hej")
     }
 
     /*

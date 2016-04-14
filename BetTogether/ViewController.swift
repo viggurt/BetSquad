@@ -21,6 +21,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         ref.observeEventType(.Value, withBlock: {
             snapshot in
             var bets: [PlacedBet] = []
@@ -33,9 +36,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.placedBets = bets
             self.gameTableView.reloadData()
         })
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,15 +46,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("TableCell", forIndexPath: indexPath)
         
-        let title = "\(placedBets[indexPath.row].homeTeam) - \(placedBets[indexPath.row].awayTeam)"
+        let title = "\(placedBets[indexPath.row].bet)"
         
-        cell.textLabel?.text = title
+        if title == "1" {
+            cell.textLabel?.text = "\(placedBets[indexPath.row].homeTeam)"
+        }
+        else if title == "2" {
+            cell.textLabel?.text = "\(placedBets[indexPath.row].awayTeam)"
+        }
+        else if title == "X" {
+            cell.textLabel?.text = "Oavgjort"
+        }
+        else{
+            cell.textLabel?.text = title
+        }
+        
+        let subtitle = "\(placedBets[indexPath.row].homeTeam) - \(placedBets[indexPath.row].awayTeam)"
+        
+        
+        cell.detailTextLabel?.text = subtitle
         
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return placedBets.count
+    }
+    
+    @IBAction func exit(segue: UIStoryboardSegue){
+        let ref = self.choosenBet?.ref
+        ref!.removeValue()
+        self.gameTableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

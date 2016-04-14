@@ -14,7 +14,7 @@ class PlacedBet {
     let awayTeam: String
     let sport: String
     let bet: String
-    let odds: Double
+    let odds: String
     let company: String
     let date: String
     let unit: Int
@@ -22,7 +22,7 @@ class PlacedBet {
     
     let ref: Firebase?
     
-    init(homeTeam: String, awayTeam: String, sport: String, bet: String, odds: Double, company: String, date: String, unit: Int, analys: String){
+    init(homeTeam: String, awayTeam: String, sport: String, bet: String, odds: String, company: String, date: String, unit: Int, analys: String){
         self.homeTeam = homeTeam
         self.awayTeam = awayTeam
         self.sport = sport
@@ -42,7 +42,7 @@ class PlacedBet {
         awayTeam = snapshot.value["awayTeam"] as! String
         sport = snapshot.value["sport"] as! String
         bet = snapshot.value["bet"] as! String
-        odds = snapshot.value["odds"] as! Double
+        odds = snapshot.value["odds"] as! String
         company = snapshot.value["company"] as! String
         date = snapshot.value["date"] as! String
         unit = snapshot.value["unit"] as! Int
