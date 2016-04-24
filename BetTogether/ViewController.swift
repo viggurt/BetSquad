@@ -13,18 +13,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var placedBets: [PlacedBet] = []
     var addToView = AddToViewController()
     var choosenBet: PlacedBet?
+    var choosenGroup: CreateGroup?
     
-    let ref = Firebase(url: "https://betsquad.firebaseio.com/Placed%20Bet")
+    let ref = Firebase(url: "https://betsquad.firebaseio.com/Groups/")
 
     @IBOutlet weak var gameTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        // Do any additional setup after loading the view, typically from a nib.
+        print(choosenGroup!.betKey)
+    }
+    
+    func groupKey() -> String{
+    
+        return choosenGroup!.betKey
     }
     
     override func viewDidAppear(animated: Bool) {
-        ref.observeEventType(.Value, withBlock: {
+    
+        
+        ref.childByAppendingPath(ref.authData.uid).childByAppendingPath("\(choosenGroup!.betKey)").childByAppendingPath("Placed Bets").observeEventType(.Value, withBlock: {
             snapshot in
             var bets: [PlacedBet] = []
             
@@ -93,6 +102,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let indexPathRow = gameTableView.indexPathForCell(cell) {
                 memberIndex = indexPathRow.row
                 self.choosenBet = placedBets[memberIndex]
+                
             }
     
         if segue.identifier == "ToShow" {

@@ -11,8 +11,9 @@ import Firebase
 
 class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate{
     
-    let ref = Firebase(url: "https://betsquad.firebaseio.com/")
+    let ref = Firebase(url: "https://betsquad.firebaseio.com/Groups")
     var unit: Int = 1
+    var choosenGroup: CreateGroup?
 
     //MARK: Outlets
     @IBOutlet weak var homeTeamTextField: UITextField!
@@ -33,7 +34,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     //MARK: Pickerview egenskaper
     var dataPickerView = UIPickerView()
     var betType = ["1","X","2", "Över", "Under", "Målskytt","Resultat"]
-    var sport = ["Baseball", "Fotboll", "Basket", "Hockey", "Tennis"]
+    var sport = ["Baseball", "Fotboll", "Basket", "Hockey", "Tennis", "Dart"]
     var activeDataArray = []
     var dataTextField = UITextField()
     
@@ -54,6 +55,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         self.homeTeamTextField.delegate = self
         self.awayTeamTextField.delegate = self
         reviewText?.delegate = self
+        print(choosenGroup?.betKey)
         
         //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -145,10 +147,12 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         let placedBet = PlacedBet(homeTeam: homeTeam, awayTeam: awayTeam, sport: sportText, bet: betText, odds: oddsText, company: companyText, date: date, unit: unit, analys: review)
         
-        let betRef = ref.childByAppendingPath("Placed Bet")
-        let betIdRef = betRef.childByAutoId()
         
-        betIdRef.setValue(placedBet.toAnyObject())
+        let betRef = ref.childByAppendingPath(ref.authData.uid).childByAppendingPath("\(delegate!.groupKey())")
+        
+        let betBetRef = betRef.childByAppendingPath("Placed Bets").childByAutoId()
+        
+        betBetRef.setValue(placedBet.toAnyObject())
         
         //delegate?.addGame(homeTeam,awayTeam: awayTeam)
 /*homeTeamTextField.text = ""

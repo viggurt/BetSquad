@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2169811A3CCD3E4A89C40A11 /* Pods_BetTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F3D8B20639274873105115 /* Pods_BetTogether.framework */; };
+		93153C7E1CCD817E00A1527F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93153C7D1CCD817E00A1527F /* CustomCell.swift */; };
+		9340830F1CC8C28100A37401 /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9340830E1CC8C28100A37401 /* CreateGroup.swift */; };
+		934083111CC8C92800A37401 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934083101CC8C92800A37401 /* CreateGroupViewController.swift */; };
 		93585CAC1C86CD2B00106E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CAB1C86CD2B00106E13 /* AppDelegate.swift */; };
 		93585CAE1C86CD2B00106E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CAD1C86CD2B00106E13 /* ViewController.swift */; };
 		93585CB11C86CD2B00106E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93585CAF1C86CD2B00106E13 /* Main.storyboard */; };
@@ -16,6 +19,10 @@
 		93585CC11C86CD2B00106E13 /* BetTogetherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CC01C86CD2B00106E13 /* BetTogetherTests.swift */; };
 		93585CCC1C86CD2B00106E13 /* BetTogetherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CCB1C86CD2B00106E13 /* BetTogetherUITests.swift */; };
 		93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CDD1C86D38800106E13 /* AddToViewController.swift */; };
+		93946A321CC0E07B005465F0 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93946A311CC0E07B005465F0 /* FirebaseService.swift */; };
+		93946A351CC0E35F005465F0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93946A341CC0E35F005465F0 /* LogInViewController.swift */; };
+		93946A371CC0E9BC005465F0 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93946A361CC0E9BC005465F0 /* LoggedInViewController.swift */; };
+		93946A391CC0EBF1005465F0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93946A381CC0EBF1005465F0 /* RegisterViewController.swift */; };
 		93C2D43F1C8EFB7F00127615 /* ShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D43E1C8EFB7F00127615 /* ShowController.swift */; };
 		93FF486F1CB68B3200CCDA32 /* PlacedBet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */; };
 /* End PBXBuildFile section */
@@ -38,20 +45,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93585CA81C86CD2B00106E13 /* BetTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93153C7D1CCD817E00A1527F /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ../CustomCell.swift; sourceTree = "<group>"; };
+		9340830E1CC8C28100A37401 /* CreateGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGroup.swift; path = ../CreateGroup.swift; sourceTree = "<group>"; };
+		934083101CC8C92800A37401 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		93585CA81C86CD2B00106E13 /* BetSquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetSquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93585CAB1C86CD2B00106E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93585CAD1C86CD2B00106E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BetTogether/ViewController.swift; sourceTree = "<group>"; };
 		93585CB01C86CD2B00106E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93585CB21C86CD2B00106E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93585CB51C86CD2B00106E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93585CB71C86CD2B00106E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93585CBC1C86CD2B00106E13 /* BetTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93585CBC1C86CD2B00106E13 /* BetSquad.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetSquad.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93585CC01C86CD2B00106E13 /* BetTogetherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTogetherTests.swift; sourceTree = "<group>"; };
 		93585CC21C86CD2B00106E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93585CC71C86CD2B00106E13 /* BetTogetherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetTogetherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93585CC71C86CD2B00106E13 /* BetSquad.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetSquad.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93585CCB1C86CD2B00106E13 /* BetTogetherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetTogetherUITests.swift; sourceTree = "<group>"; };
 		93585CCD1C86CD2B00106E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93585CDD1C86D38800106E13 /* AddToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddToViewController.swift; path = BetTogether/AddToViewController.swift; sourceTree = "<group>"; };
+		93946A311CC0E07B005465F0 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		93946A341CC0E35F005465F0 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		93946A361CC0E9BC005465F0 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		93946A381CC0EBF1005465F0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		93C2D43E1C8EFB7F00127615 /* ShowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowController.swift; path = BetTogether/ShowController.swift; sourceTree = "<group>"; };
 		93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedBet.swift; sourceTree = "<group>"; };
 		BD3552B0D840FC05B15FE654 /* Pods-BetTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetTogether/Pods-BetTogether.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,9 +102,13 @@
 		930477741CB7C72F0040B7EE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				93585CDD1C86D38800106E13 /* AddToViewController.swift */,
-				93C2D43E1C8EFB7F00127615 /* ShowController.swift */,
+				934083101CC8C92800A37401 /* CreateGroupViewController.swift */,
+				93946A341CC0E35F005465F0 /* LogInViewController.swift */,
+				93946A381CC0EBF1005465F0 /* RegisterViewController.swift */,
+				93946A361CC0E9BC005465F0 /* LoggedInViewController.swift */,
 				93585CAD1C86CD2B00106E13 /* ViewController.swift */,
+				93C2D43E1C8EFB7F00127615 /* ShowController.swift */,
+				93585CDD1C86D38800106E13 /* AddToViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -107,6 +125,7 @@
 		93585C9F1C86CD2B00106E13 = {
 			isa = PBXGroup;
 			children = (
+				93946A331CC0E082005465F0 /* Service */,
 				930477751CB7C74B0040B7EE /* Storyboards */,
 				930477741CB7C72F0040B7EE /* Controller */,
 				93585CAA1C86CD2B00106E13 /* BetTogether */,
@@ -121,9 +140,9 @@
 		93585CA91C86CD2B00106E13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93585CA81C86CD2B00106E13 /* BetTogether.app */,
-				93585CBC1C86CD2B00106E13 /* BetTogetherTests.xctest */,
-				93585CC71C86CD2B00106E13 /* BetTogetherUITests.xctest */,
+				93585CA81C86CD2B00106E13 /* BetSquad.app */,
+				93585CBC1C86CD2B00106E13 /* BetSquad.xctest */,
+				93585CC71C86CD2B00106E13 /* BetSquad.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				93585CAB1C86CD2B00106E13 /* AppDelegate.swift */,
+				93153C7D1CCD817E00A1527F /* CustomCell.swift */,
+				9340830E1CC8C28100A37401 /* CreateGroup.swift */,
 				93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */,
 				93585CB21C86CD2B00106E13 /* Assets.xcassets */,
 				93585CB71C86CD2B00106E13 /* Info.plist */,
@@ -157,6 +178,14 @@
 			path = BetTogetherUITests;
 			sourceTree = "<group>";
 		};
+		93946A331CC0E082005465F0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				93946A311CC0E07B005465F0 /* FirebaseService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		B2E50ED7C3B3E61116A67002 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93585CA71C86CD2B00106E13 /* BetTogether */ = {
+		93585CA71C86CD2B00106E13 /* BetSquad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93585CD01C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogether" */;
+			buildConfigurationList = 93585CD01C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetSquad" */;
 			buildPhases = (
 				35A55B2B0372B8136A66336A /* Check Pods Manifest.lock */,
 				93585CA41C86CD2B00106E13 /* Sources */,
@@ -192,14 +221,14 @@
 			);
 			dependencies = (
 			);
-			name = BetTogether;
+			name = BetSquad;
 			productName = BetTogether;
-			productReference = 93585CA81C86CD2B00106E13 /* BetTogether.app */;
+			productReference = 93585CA81C86CD2B00106E13 /* BetSquad.app */;
 			productType = "com.apple.product-type.application";
 		};
-		93585CBB1C86CD2B00106E13 /* BetTogetherTests */ = {
+		93585CBB1C86CD2B00106E13 /* BetSquadTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93585CD31C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogetherTests" */;
+			buildConfigurationList = 93585CD31C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetSquadTests" */;
 			buildPhases = (
 				93585CB81C86CD2B00106E13 /* Sources */,
 				93585CB91C86CD2B00106E13 /* Frameworks */,
@@ -210,14 +239,14 @@
 			dependencies = (
 				93585CBE1C86CD2B00106E13 /* PBXTargetDependency */,
 			);
-			name = BetTogetherTests;
+			name = BetSquadTests;
 			productName = BetTogetherTests;
-			productReference = 93585CBC1C86CD2B00106E13 /* BetTogetherTests.xctest */;
+			productReference = 93585CBC1C86CD2B00106E13 /* BetSquad.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		93585CC61C86CD2B00106E13 /* BetTogetherUITests */ = {
+		93585CC61C86CD2B00106E13 /* BetSquadUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93585CD61C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogetherUITests" */;
+			buildConfigurationList = 93585CD61C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetSquadUITests" */;
 			buildPhases = (
 				93585CC31C86CD2B00106E13 /* Sources */,
 				93585CC41C86CD2B00106E13 /* Frameworks */,
@@ -228,9 +257,9 @@
 			dependencies = (
 				93585CC91C86CD2B00106E13 /* PBXTargetDependency */,
 			);
-			name = BetTogetherUITests;
+			name = BetSquadUITests;
 			productName = BetTogetherUITests;
-			productReference = 93585CC71C86CD2B00106E13 /* BetTogetherUITests.xctest */;
+			productReference = 93585CC71C86CD2B00106E13 /* BetSquad.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +288,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 93585CA31C86CD2B00106E13 /* Build configuration list for PBXProject "BetTogether" */;
+			buildConfigurationList = 93585CA31C86CD2B00106E13 /* Build configuration list for PBXProject "BetSquad" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -272,9 +301,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93585CA71C86CD2B00106E13 /* BetTogether */,
-				93585CBB1C86CD2B00106E13 /* BetTogetherTests */,
-				93585CC61C86CD2B00106E13 /* BetTogetherUITests */,
+				93585CA71C86CD2B00106E13 /* BetSquad */,
+				93585CBB1C86CD2B00106E13 /* BetSquadTests */,
+				93585CC61C86CD2B00106E13 /* BetSquadUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -359,11 +388,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93946A391CC0EBF1005465F0 /* RegisterViewController.swift in Sources */,
 				93C2D43F1C8EFB7F00127615 /* ShowController.swift in Sources */,
 				93585CAE1C86CD2B00106E13 /* ViewController.swift in Sources */,
 				93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */,
+				93946A351CC0E35F005465F0 /* LogInViewController.swift in Sources */,
 				93585CAC1C86CD2B00106E13 /* AppDelegate.swift in Sources */,
+				93946A321CC0E07B005465F0 /* FirebaseService.swift in Sources */,
 				93FF486F1CB68B3200CCDA32 /* PlacedBet.swift in Sources */,
+				934083111CC8C92800A37401 /* CreateGroupViewController.swift in Sources */,
+				93946A371CC0E9BC005465F0 /* LoggedInViewController.swift in Sources */,
+				93153C7E1CCD817E00A1527F /* CustomCell.swift in Sources */,
+				9340830F1CC8C28100A37401 /* CreateGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,12 +424,12 @@
 /* Begin PBXTargetDependency section */
 		93585CBE1C86CD2B00106E13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93585CA71C86CD2B00106E13 /* BetTogether */;
+			target = 93585CA71C86CD2B00106E13 /* BetSquad */;
 			targetProxy = 93585CBD1C86CD2B00106E13 /* PBXContainerItemProxy */;
 		};
 		93585CC91C86CD2B00106E13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93585CA71C86CD2B00106E13 /* BetTogether */;
+			target = 93585CA71C86CD2B00106E13 /* BetSquad */;
 			targetProxy = 93585CC81C86CD2B00106E13 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -511,7 +547,7 @@
 				INFOPLIST_FILE = BetTogether/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.viggurt.BetTogether;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BetSquad;
 			};
 			name = Debug;
 		};
@@ -523,7 +559,7 @@
 				INFOPLIST_FILE = BetTogether/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.viggurt.BetTogether;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BetSquad;
 			};
 			name = Release;
 		};
@@ -534,8 +570,8 @@
 				INFOPLIST_FILE = BetTogetherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.viggurt.BetTogetherTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetTogether.app/BetTogether";
+				PRODUCT_NAME = BetSquad;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetSquad.app/BetSquad";
 			};
 			name = Debug;
 		};
@@ -546,8 +582,8 @@
 				INFOPLIST_FILE = BetTogetherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.viggurt.BetTogetherTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetTogether.app/BetTogether";
+				PRODUCT_NAME = BetSquad;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetSquad.app/BetSquad";
 			};
 			name = Release;
 		};
@@ -557,7 +593,7 @@
 				INFOPLIST_FILE = BetTogetherUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.viggurt.BetTogetherUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BetSquad;
 				TEST_TARGET_NAME = BetTogether;
 				USES_XCTRUNNER = YES;
 			};
@@ -569,7 +605,7 @@
 				INFOPLIST_FILE = BetTogetherUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.viggurt.BetTogetherUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BetSquad;
 				TEST_TARGET_NAME = BetTogether;
 				USES_XCTRUNNER = YES;
 			};
@@ -578,7 +614,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93585CA31C86CD2B00106E13 /* Build configuration list for PBXProject "BetTogether" */ = {
+		93585CA31C86CD2B00106E13 /* Build configuration list for PBXProject "BetSquad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93585CCE1C86CD2B00106E13 /* Debug */,
@@ -587,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93585CD01C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogether" */ = {
+		93585CD01C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetSquad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93585CD11C86CD2B00106E13 /* Debug */,
@@ -596,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93585CD31C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogetherTests" */ = {
+		93585CD31C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetSquadTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93585CD41C86CD2B00106E13 /* Debug */,
@@ -605,7 +641,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93585CD61C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetTogetherUITests" */ = {
+		93585CD61C86CD2B00106E13 /* Build configuration list for PBXNativeTarget "BetSquadUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93585CD71C86CD2B00106E13 /* Debug */,

@@ -19,8 +19,10 @@ class PlacedBet {
     let date: String
     let unit: Int
     let analys: String
+    let betKey: String
     
     let ref: Firebase?
+
     
     init(homeTeam: String, awayTeam: String, sport: String, bet: String, odds: String, company: String, date: String, unit: Int, analys: String){
         self.homeTeam = homeTeam
@@ -34,6 +36,8 @@ class PlacedBet {
         self.analys = analys
         
         self.ref = nil
+        self.betKey = ""
+        
         
     }
     
@@ -48,12 +52,15 @@ class PlacedBet {
         unit = snapshot.value["unit"] as! Int
         analys = snapshot.value["analys"] as! String
         ref = snapshot.ref
+        betKey = snapshot.key
+        
+
         
     }
     
     func toAnyObject() -> AnyObject {
         return[
-            "homeTeam":homeTeam, "awayTeam":awayTeam, "sport":sport, "bet":bet, "odds":odds, "company":company, "date":date, "unit":unit, "analys":analys
+            "homeTeam":homeTeam, "awayTeam":awayTeam, "sport":sport, "bet":bet, "odds":odds, "company":company, "date":date, "unit":unit, "analys":analys, "betKey":betKey
         ]
     }
     

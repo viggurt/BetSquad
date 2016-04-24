@@ -13,7 +13,7 @@ class ShowController: UIViewController {
     
     let VC = ViewController()
     
-    let ref = Firebase(url: "https://betsquad.firebaseio.com/Placed%20Bet/")
+    let ref = Firebase(url: "https://betsquad.firebaseio.com/Groups/Placed%20Bet/")
     
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var betTypeLabel: UILabel!
@@ -36,6 +36,8 @@ class ShowController: UIViewController {
         teamLabel.text = "\(choosenBet!.homeTeam) - \(choosenBet!.awayTeam)"
         
         oddsLabel.text = "\(choosenBet!.odds)"
+        
+        print(choosenBet!.betKey)
         
         //Bet typen
         
@@ -60,7 +62,18 @@ class ShowController: UIViewController {
         else if choosenBet!.sport == "Tennis" {
             sportImageView.image = UIImage(named: "tennis")
         }
-        
+        else if choosenBet!.sport == "Dart" {
+            sportImageView.image = UIImage(named: "dart")
+        }
+        else if choosenBet!.sport == "Basket" {
+            sportImageView.image = UIImage(named: "basket")
+        }
+        else if choosenBet!.sport == "Hockey" {
+            sportImageView.image = UIImage(named: "hockey")
+        }
+        else if choosenBet!.sport == "Baseball" {
+            sportImageView.image = UIImage(named: "baseball")
+        }
         //Bolag bilden
         
         if choosenBet!.company == "bet365" {
@@ -68,6 +81,9 @@ class ShowController: UIViewController {
         }
         else if choosenBet!.company == "unibet" {
             companyImageView.image = UIImage(named: "unibet")
+        }
+        else if choosenBet!.company == "betfair" {
+            companyImageView.image = UIImage(named: "betfair")
         }
         else{
             companyLabel.text = choosenBet!.company
