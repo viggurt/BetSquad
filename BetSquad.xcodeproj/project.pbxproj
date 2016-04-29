@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2169811A3CCD3E4A89C40A11 /* Pods_BetTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F3D8B20639274873105115 /* Pods_BetTogether.framework */; };
 		93153C7E1CCD817E00A1527F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93153C7D1CCD817E00A1527F /* CustomCell.swift */; };
+		93153C841CD21EBA00A1527F /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93153C831CD21EBA00A1527F /* SportCell.swift */; };
 		9340830F1CC8C28100A37401 /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9340830E1CC8C28100A37401 /* CreateGroup.swift */; };
 		934083111CC8C92800A37401 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934083101CC8C92800A37401 /* CreateGroupViewController.swift */; };
 		93585CAC1C86CD2B00106E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93585CAB1C86CD2B00106E13 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		93153C7D1CCD817E00A1527F /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ../CustomCell.swift; sourceTree = "<group>"; };
+		93153C831CD21EBA00A1527F /* SportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportCell.swift; sourceTree = "<group>"; };
 		9340830E1CC8C28100A37401 /* CreateGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGroup.swift; path = ../CreateGroup.swift; sourceTree = "<group>"; };
 		934083101CC8C92800A37401 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		93585CA81C86CD2B00106E13 /* BetSquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetSquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 				93153C7D1CCD817E00A1527F /* CustomCell.swift */,
 				9340830E1CC8C28100A37401 /* CreateGroup.swift */,
 				93FF486E1CB68B3200CCDA32 /* PlacedBet.swift */,
+				93153C831CD21EBA00A1527F /* SportCell.swift */,
 				93585CB21C86CD2B00106E13 /* Assets.xcassets */,
 				93585CB71C86CD2B00106E13 /* Info.plist */,
 			);
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93946A391CC0EBF1005465F0 /* RegisterViewController.swift in Sources */,
+				93153C841CD21EBA00A1527F /* SportCell.swift in Sources */,
 				93C2D43F1C8EFB7F00127615 /* ShowController.swift in Sources */,
 				93585CAE1C86CD2B00106E13 /* ViewController.swift in Sources */,
 				93585CDE1C86D38800106E13 /* AddToViewController.swift in Sources */,

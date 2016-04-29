@@ -17,8 +17,18 @@ class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
+    }
+
+    
+    //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

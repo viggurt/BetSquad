@@ -20,6 +20,15 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

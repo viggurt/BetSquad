@@ -15,7 +15,7 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var createdGroups: [CreateGroup] = []
     var chosenGroup = 0
-    
+    var choosenGroup: CreateGroup?
     
     
     @IBOutlet var groupTableView: UITableView!
@@ -35,6 +35,7 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
                 groups.append(group)
             }
             self.createdGroups = groups
+            
             self.groupTableView.reloadData()
         })
     }
@@ -57,7 +58,6 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         cell.groupName.text = "\(createdGroups[indexPath.row].name)"
-        cell.groupImage.image = UIImage(named: "\(createdGroups[indexPath.row].image)")
         
         return cell
     }
@@ -71,6 +71,26 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            if let tv = groupTableView
+            {
+                
+                
+                
+                let ref = createdGroups.removeAtIndex(indexPath.row)
+                ref.ref?.removeValue()
+                tv.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+                
+                
+            }
+        }
+    }
     
     
     

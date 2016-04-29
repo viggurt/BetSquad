@@ -125,11 +125,10 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         return true
     }
     
+    //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
     func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
     
     
     //MARK: Actions

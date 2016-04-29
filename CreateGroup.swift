@@ -11,28 +11,26 @@ import Firebase
 
 class CreateGroup{
     let name: String
-    let image: String
+    //var image: String
     let betKey: String
     
     let ref: Firebase?
     
-    init(name: String, image: String){
+    init(name: String){
         self.name = name
         self.betKey = ""
-        self.image = image
         self.ref = nil
     }
     
     init(snapshot: FDataSnapshot){
         name = snapshot.value["name"] as! String
-        image = snapshot.value["image"] as! String
        ref = snapshot.ref
         betKey = snapshot.key
         
     }
     
     func toAnyObject() -> AnyObject{
-        return ["name": name, "image": image, "betKey":betKey]
+        return ["name": name, "betKey":betKey]
     
     }
 

@@ -15,6 +15,7 @@ class ShowController: UIViewController {
     
     let ref = Firebase(url: "https://betsquad.firebaseio.com/Groups/Placed%20Bet/")
     
+    //MARK: Outlets
     @IBOutlet weak var teamLabel: UILabel!
     @IBOutlet weak var betTypeLabel: UILabel!
     @IBOutlet weak var sportImageView: UIImageView!
@@ -23,6 +24,8 @@ class ShowController: UIViewController {
     @IBOutlet weak var companyImageView: UIImageView!
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var oddsLabel: UILabel!
+    @IBOutlet weak var analysText: UITextView!
+    
     //var teams: String?
     //var betType: String?
     var choosenBet: PlacedBet?
@@ -31,11 +34,15 @@ class ShowController: UIViewController {
         super.viewDidLoad()
         
         
+        //Sätter alla värden från det valda bettet
         dateLabel.text = choosenBet!.date
 
         teamLabel.text = "\(choosenBet!.homeTeam) - \(choosenBet!.awayTeam)"
         
         oddsLabel.text = "\(choosenBet!.odds)"
+        
+        analysText.text = "\(choosenBet!.analys)"
+        analysText.textColor = UIColor.whiteColor()
         
         print(choosenBet!.betKey)
         

@@ -13,12 +13,28 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UINaviga
     
     let ref = Firebase(url: "https://betsquad.firebaseio.com/")
     
-    @IBOutlet weak var imagePicked: UIImageView!
+    //var pictureLabel: [String] = []
+    //var pictures: [UIImage] = []
+    var chosenPicutre = 0
+    
     @IBOutlet weak var groupName: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         groupName.delegate = self
-        // Do any additional setup after loading the view.
+        
+        /*pictureLabel = ["Fotboll", "Tennis", "Baseball", "Basket", "Dart", "Hockey", "Slumpat"]
+        pictures = [UIImage(named:"boll1.png")!, UIImage(named: "tennis.png")!, UIImage(named: "baseball.png")!, UIImage(named: "basket.png")!, UIImage(named: "dart.png")!, UIImage(named: "hockey.png")!, UIImage(named: "randomSport.png")!]*/
+        
+        //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,36 +42,36 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UINaviga
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    /*func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pictures.count
     }
-    */
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        chosenPicutre = indexPath.row
+        imagePicked.image = pictures[indexPath.row]
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("pictureCell", forIndexPath: indexPath) as! SportCell
+        
+        cell.sportPicture.image = pictures[indexPath.row]
+        cell.sportLabel.text! = "\(pictureLabel[indexPath.row])"
+        return cell
+    }*/
+    
+
     @IBAction func selectPhotoButtonWasPressed(sender: AnyObject) {
         
-        let imagePicker = UIImagePickerController()
-        
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        presentViewController(imagePicker, animated: true, completion: nil)
     }
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        imagePicked.image = image
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+    
     
     
     
     @IBAction func createGroupButtonWasPressed(sender: UIButton) {
         let name = groupName.text!
-    
+        if name != "" {
         
-        let group = CreateGroup(name: name, image: "\(imagePicked.image!)")
+        let group = CreateGroup(name: name)        
         
         let groupRef = ref.childByAppendingPath("Groups")
         let groupIdRef = groupRef.childByAppendingPath(ref.authData.uid).childByAutoId()
@@ -63,6 +79,10 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UINaviga
         groupIdRef.setValue(group.toAnyObject())
         
         navigationController?.popViewControllerAnimated(true)
+        }
+        else{
+           errorLabel.hidden = false
+        }
     }
 
 }
