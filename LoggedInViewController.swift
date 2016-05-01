@@ -11,8 +11,10 @@ import Firebase
 
 class LoggedInViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //Referensen till Firebase URL
     let ref = Firebase(url: "https://betsquad.firebaseio.com/Groups")
 
+    //MARK: Variabler
     var createdGroups: [CreateGroup] = []
     var chosenGroup = 0
     var choosenGroup: CreateGroup?
@@ -25,6 +27,8 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func viewDidAppear(animated: Bool) {
+        
+        //Visar vägen i Firebase
         ref.childByAppendingPath(ref.authData.uid).observeEventType(.Value, withBlock: {
             snapshot in
             var groups: [CreateGroup] = []
@@ -44,15 +48,19 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //MARK: TableView egenskaper
     
+    //Funktion för hur många rader denna TableView ska ha
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return createdGroups.count
     }
     
+    //Funktion för vilken cell du väljer
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         chosenGroup = indexPath.row
     }
     
+    //Funktion för vad som ska stå i cellen
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("GroupCell", forIndexPath: indexPath) as! CustomCell
         
@@ -62,19 +70,12 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
+    //Funktion för att swipea en cell åt höger så kan man deleta den gruppen
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             if let tv = groupTableView
@@ -92,8 +93,7 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    
-    
+    //Förbereder för att visa de placerade spelen i gruppen
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "GroupView" {
         
@@ -110,6 +110,9 @@ class LoggedInViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
+    //MARK: Actions
+    
+    //Funktion för att logga ut
     @IBAction func logOutButtonWasPressed(sender: UIBarButtonItem) {
         let VC = self.storyboard?.instantiateViewControllerWithIdentifier("logInScreen") as! LogInViewController!
         

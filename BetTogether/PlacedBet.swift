@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 class PlacedBet {
+    //MARK: Variabler
     let homeTeam: String
     let awayTeam: String
     let sport: String
@@ -21,6 +22,7 @@ class PlacedBet {
     let analys: String
     let betKey: String
     
+    //Referens till Firebase
     let ref: Firebase?
 
     
@@ -41,6 +43,7 @@ class PlacedBet {
         
     }
     
+    //Samlar data till Firebase
     init(snapshot: FDataSnapshot){
         homeTeam = snapshot.value["homeTeam"] as! String
         awayTeam = snapshot.value["awayTeam"] as! String

@@ -26,14 +26,15 @@ class ShowController: UIViewController {
     @IBOutlet weak var oddsLabel: UILabel!
     @IBOutlet weak var analysText: UITextView!
     
-    //var teams: String?
-    //var betType: String?
+    //MARK: Variabler
     var choosenBet: PlacedBet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+        
+    //MARK: Values
         //Sätter alla värden från det valda bettet
         dateLabel.text = choosenBet!.date
 
@@ -63,24 +64,9 @@ class ShowController: UIViewController {
         
         //Sport bilden
         
-        if choosenBet!.sport == "Fotboll" {
-            sportImageView.image = UIImage(named: "boll1")
-        }
-        else if choosenBet!.sport == "Tennis" {
-            sportImageView.image = UIImage(named: "tennis")
-        }
-        else if choosenBet!.sport == "Dart" {
-            sportImageView.image = UIImage(named: "dart")
-        }
-        else if choosenBet!.sport == "Basket" {
-            sportImageView.image = UIImage(named: "basket")
-        }
-        else if choosenBet!.sport == "Hockey" {
-            sportImageView.image = UIImage(named: "hockey")
-        }
-        else if choosenBet!.sport == "Baseball" {
-            sportImageView.image = UIImage(named: "baseball")
-        }
+        sportImageView.image = UIImage(named: choosenBet!.sport)
+        
+        
         //Bolag bilden
         
         if choosenBet!.company == "bet365" {
@@ -115,9 +101,6 @@ class ShowController: UIViewController {
         unitImageView.image = UIImage(named: "unit5")
         }
         
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -126,15 +109,5 @@ class ShowController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   
 
 }

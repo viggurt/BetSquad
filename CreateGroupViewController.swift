@@ -11,21 +11,17 @@ import Firebase
 
 class CreateGroupViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    //Referens till Firebase URL
     let ref = Firebase(url: "https://betsquad.firebaseio.com/")
-    
-    //var pictureLabel: [String] = []
-    //var pictures: [UIImage] = []
     var chosenPicutre = 0
     
+    //MARK: Outlets
     @IBOutlet weak var groupName: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         groupName.delegate = self
-        
-        /*pictureLabel = ["Fotboll", "Tennis", "Baseball", "Basket", "Dart", "Hockey", "Slumpat"]
-        pictures = [UIImage(named:"boll1.png")!, UIImage(named: "tennis.png")!, UIImage(named: "baseball.png")!, UIImage(named: "basket.png")!, UIImage(named: "dart.png")!, UIImage(named: "hockey.png")!, UIImage(named: "randomSport.png")!]*/
         
         //Funktion för att toggla ner tangentbordet när man klickar på bakgrunden
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -41,32 +37,7 @@ class CreateGroupViewController: UIViewController, UITextFieldDelegate, UINaviga
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pictures.count
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        chosenPicutre = indexPath.row
-        imagePicked.image = pictures[indexPath.row]
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("pictureCell", forIndexPath: indexPath) as! SportCell
-        
-        cell.sportPicture.image = pictures[indexPath.row]
-        cell.sportLabel.text! = "\(pictureLabel[indexPath.row])"
-        return cell
-    }*/
-    
-
-    @IBAction func selectPhotoButtonWasPressed(sender: AnyObject) {
-        
-    }
-    
-    
-    
-    
+    //Skapa grupp-knappen blev tryckt på
     @IBAction func createGroupButtonWasPressed(sender: UIButton) {
         let name = groupName.text!
         if name != "" {

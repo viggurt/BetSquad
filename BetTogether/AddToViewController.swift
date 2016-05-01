@@ -61,6 +61,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
+        //Funktion för att ställa datumet i Date Pickern
         datePickerView.addTarget(self, action: Selector("datePickerChanged"), forControlEvents: UIControlEvents.ValueChanged)
         
         
@@ -108,18 +109,15 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         else if activeDataArray == sport {
             sportTextField.text = sport[row] as String
         }
-        //Göm pickerviewen
         
+        //Göm pickerviewen
         dataPickerView.reloadAllComponents()
         dataPickerView.hidden = true
         self.dismissKeyboard()
-        //dataPickerView.reloadAllComponents()
-        //self.dataPickerView.resignFirstResponder()
-        //self.dataPickerView.frameForAlignmentRect(CGRectMake(0, 900, 375, 219))
         
     }
     
-    //function to hide data in
+    //Funktion som sätter värdet i Textfielden
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -133,7 +131,7 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     //MARK: Actions
     
-    
+    //Placera spel-knappen blir aktiverad
     @IBAction func placeOddsButton(sender: UIButton) {
         let homeTeam = homeTeamTextField.text!
         let awayTeam = awayTeamTextField.text!
@@ -152,15 +150,6 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let betBetRef = betRef.childByAppendingPath("Placed Bets").childByAutoId()
         
         betBetRef.setValue(placedBet.toAnyObject())
-        
-        //delegate?.addGame(homeTeam,awayTeam: awayTeam)
-/*homeTeamTextField.text = ""
- awayTeamTextField.text = ""
- sportTextField.text = ""
- betTextField.text = ""
- oddsTextField.text = ""
- companyTextField.text = ""
- reviewText.text = ""*/
 
         navigationController?.popViewControllerAnimated(true)
     }
@@ -197,15 +186,14 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
         let dateFormatter = NSDateFormatter()
         
+        //Sätter formatet för hur det ska se ut
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
         dateFormatter.locale = NSLocale(localeIdentifier: "sv_SE")
+        
         
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         
-        
-        
-        //dateFormatter.dateFormat = "dd-mm-yyyy hh:mm"
         datePickerField.text = dateFormatter.stringFromDate(sender.date)
         
         
@@ -223,15 +211,5 @@ class AddToViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         datePickerView.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

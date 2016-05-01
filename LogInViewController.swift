@@ -10,9 +10,12 @@ import UIKit
 import Firebase
 
 class LogInViewController: UIViewController {
+    
+    //MARK: Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //Referens till Firebase URL
     let fireService = FirebaseService(rootRef: "https://betsquad.firebaseio.com/")
 
     override func viewDidLoad() {
@@ -33,25 +36,18 @@ class LogInViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //Logga in-knappen blev aktiverad
     @IBAction func logInButtonWasPressed(sender: UIButton) {
         if let email = emailTextField.text, password = passwordTextField.text{
+            
+            //Knappen blir blå medans den kollar om infon är korrekt
             sender.backgroundColor = UIColor.blueColor()
             
             fireService.loginUserWithEmail(email, password: password) {(passed:Bool) in
                 
+                //Om infon stämmer så blir knappen grön och man loggas in
                 if passed == true{
                     if let id = self.fireService.authID {
                         self.fireService.users.childByAppendingPath(id).observeEventType(.Value) { (data:FDataSnapshot!) in
@@ -67,6 +63,7 @@ class LogInViewController: UIViewController {
                     
                     sender.backgroundColor = UIColor.greenColor()
                 }
+                    //Annars blir knappen röd
                 else{
                     sender.backgroundColor = UIColor.redColor()
                 }
@@ -74,10 +71,4 @@ class LogInViewController: UIViewController {
             
         }
     }
-
-    
-    @IBAction func registerButtonWasPressed(sender: UIButton) {
-    }
-    
-
 }

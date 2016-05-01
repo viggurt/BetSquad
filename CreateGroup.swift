@@ -10,10 +10,12 @@ import Foundation
 import Firebase
 
 class CreateGroup{
+    
+    //Variabler
     let name: String
-    //var image: String
     let betKey: String
     
+    //Referens till Firebase
     let ref: Firebase?
     
     init(name: String){
@@ -22,6 +24,7 @@ class CreateGroup{
         self.ref = nil
     }
     
+    //Samlar datan i Firebase
     init(snapshot: FDataSnapshot){
         name = snapshot.value["name"] as! String
        ref = snapshot.ref
